@@ -1,0 +1,96 @@
+.buttons__login_text, .buttons__register_text {
+  padding: 9px 20px;
+  vertical-align: middle;
+}
+
+.buttons__register, .buttons__login {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-style: hidden;
+  background-repeat: no-repeat;
+  padding: 0px;
+}
+
+.buttons__login_text, .buttons__register_text {
+  font-family: Montserrat;
+  font-style: bold;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercas;
+}
+
+.header {
+  max-width: 1920px;
+  margin: auto;
+  height: 50px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu {
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+.main-menu_item {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+  text-decoration: none;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.main-menu_item:first-child {
+  font-weight: bold;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.Buttons {
+  display: flex;
+}
+
+.buttons__login {
+  color: #BC9CFF;
+  padding: 9px 20px;
+  position: relative;
+  z-index: -1;
+  margin-right: 20px;
+}
+
+.buttons__login::before {
+  content: "";
+  position: absolute;
+  width: 96.3%;
+  height: 89.1%;
+  top: 2px;
+  left: 2px;
+  border-radius: 22px;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  background: #ffffff;
+  z-index: -1;
+  border: 0px;
+}
+
+.buttons__register {
+  color: #FFFFFF;
+  padding: 9px 20px;
+}
+
+.buttons__login_text, .buttons__register_text {
+  padding: 9px 20px;
+}
+
+.button_sign_in {
+  background: #1890FF;
+  border: 2px solid #D9D9D9;
+  color: #fff;
+  margin-right: 10px;
+}
