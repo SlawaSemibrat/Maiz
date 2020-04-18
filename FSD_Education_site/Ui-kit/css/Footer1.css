@@ -89,7 +89,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/*************************************** */
 /*footer heading stile****************** */
 .footer-info__heading {
   font-weight: bold;
@@ -99,7 +98,7 @@ body {
   color: #1F2041;
 }
 
-/*Footer footer-social-link */
+/*footer social link */
 .footer-section {
   padding: 26px 140px;
   display: flex;
@@ -112,7 +111,9 @@ body {
 
 .footer-section__item:not(:last-child) {
   margin-right: 20px;
-  /* footer2********* */
+
+
+  /*********** footer2************************************* */
 }
 
 .footer2-container {
