@@ -4,6 +4,10 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/formElement.css">
   <link rel="stylesheet" href="/css/normalize.css">
+  <script src="/js/main.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+  <script src="dist/js/datepicker.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -43,7 +47,11 @@
       <h3>masked text field</h3>
       <span class="heading-contantainer__description">Default</span>
     </span>
-    <input type="text" class="masked-text-field__input" placeholder="ДД.ММ.ГГГГ">
+    <input type="text"
+           class="masked-text-field__input datepicker-here"
+           data-multiple-dates="2"
+           data-multiple-dates-separator=" - "
+           placeholder="ДД.ММ.ГГГГ">
   </div>
 
   <div class="container-for-items_date-dropdown">
@@ -100,11 +108,11 @@
     </label>
   </div>
 
-  <div class="container-for-items__items radio">
+  <div class="container-for-items__items radio-container">
     <span class="heading-contantainer">
       <h3>Radio Buttons</h3>
     </span>
-
+    <form class="radio">
     <label class="radio__container">
       <input class="radio__container__radio" type="checkbox" checked="checked">
       <span class="radio__container__text">Мужчина</span>
@@ -115,14 +123,24 @@
       <span class="radio__container__text">Женщина</span>
       <span class="radio__container__checkmark"></span>
     </label>
-    
+    </form>
   </div>
 
   </div>
 
+  <div class="container">
+    <div class="dropdown absolute" several-word-forms default="спальни, кровати">
+      <input class="dropdown__name" type="text" placeholder="...">
+      <div class="dropdown-list">
+        <div class="dropdown-list__item" wordforms="Спальня Спальни Спален" name="rooms" default="2">Спальни</div>
+        <div class="dropdown-list__item" wordforms="Кровать Кровати Кроватей" name="beds" default="2">Кровати</div>
+        <div class="dropdown-list__item" wordforms="Ванная$комната Ванные$комнаты Ванных$комнат" name="bath">Ванные комнаты</div>
+      </div>
+    </div>
+  </div>
 
 </div>
-<div class="container"></div>
+
 </div>
 </body>
 </html>

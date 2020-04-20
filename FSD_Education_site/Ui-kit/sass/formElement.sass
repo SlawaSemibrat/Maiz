@@ -31,7 +31,7 @@ h3
   border: 1px solid rgba(31, 32, 65, 0.25)
   box-sizing: border-box
   border-radius: 4px
-  padding: 11px 14px 7px 14px
+  padding: 13px 14px 8px 14px
   width: 320px
   outline: none
   &::-webkit-input-placeholder
@@ -39,7 +39,7 @@ h3
   &::-moz-placeholder
     @include placeholder-font-style(18px, 0.25)
 
-@mixin icon-dropdawn
+@mixin icon-dropdown
   padding-right: 44px
   background-image: url(../img/expand_more.svg)
   background-position: right 16px center
@@ -92,7 +92,7 @@ h3
 
 .dropdown-default__input
   @extend %input-style
-  @include icon-dropdawn
+  @include icon-dropdown
   &::-webkit-input-placeholder
     @include placeholder-font-style(18px, 0.75)
   &::-moz-placeholder
@@ -110,26 +110,26 @@ h3
 /***date Dropdown*****
 .date-dropdown-default-fill__input
   @extend %input-style
-  @include icon-dropdawn
+  @include icon-dropdown
   width: 150px
 
 .date-dropdown-default-empty__input
   @extend %input-style
-  @include icon-dropdawn
+  @include icon-dropdown
   width: 150px
 
 /***filter date dropdown********
 
 .filter-date-dropdown__input
   @extend %input-style
-  @include icon-dropdawn
+  @include icon-dropdown
   width: 266px
 
 /***subscription-text-field********
 
 .subscription-text-field__input
   @extend %input-style
-  @include icon-dropdawn
+  @include icon-dropdown
   background-image: url(../img/arrow_forward.svg)
   width: 266px
 
@@ -208,12 +208,16 @@ h3
 
 /***radio batton***********************
 
+.radio
+  display: flex
+
 .radio__container
   @include Montserrat(14px, 24px)
   color: rgba(31, 32, 65, 0.5)
   display: block
   position: relative
   padding-left: 30px
+  margin-right: 20px
   cursor: pointer
   -webkit-user-select: none
   -moz-user-select: none
@@ -262,3 +266,97 @@ h3
 
 .radio__container input:checked ~  .radio__container__text
   color: rgba(31, 32, 65, 0.75)
+
+
+/*****dropdown expend**********
+.dropdown
+  display: flex
+  flex-direction: column
+  width: 266px
+
+
+.absolute .dropdown-list
+  position: relative
+  top: -1px
+  box-sizing: border-box
+  z-index: 1
+
+.dropdown__name
+  @extend %input-style
+  @include icon-dropdown
+  @include Montserrat(14px, 24px)
+  text-overflow: ellipsis
+  width: inherit
+  color: rgba(31, 32, 65, 0.75)
+  border: 1px solid rgba(31, 32, 65, 0.5)
+  cursor: pointer
+
+.dropdown-list
+  @extend %input-style
+  @include Montserrat(12px,15px)
+  padding: 13px 15px 17px 15px
+  width: inherit
+  font-weight: bold
+  color: #1F2041
+  text-transform: uppercase
+  display: none
+  border: 1px solid rgba(31, 32, 65, 0.5)
+  border-top-left-radius: 0px
+  border-top-right-radius: 0px
+
+.dropdown__name__chengOnClick
+  border-bottom-left-radius: 0px
+  border-bottom-right-radius: 0px
+
+.dropdown.active .dropdown-list
+  display: block
+
+
+.dropdown-list__item
+  width: 100%
+  &:not(:last-child)
+    padding-bottom: 22px
+
+.controls
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  float: right
+  cursor: pointer
+  width: 62px
+  &:not(:last-child)
+    padding-bottom: 7px
+
+.minus__container
+  @include Montserrat(18px,10px)
+  color: rgba(31, 32, 65, 0.5)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    right: -12px
+    top: -10px
+
+.plus__container
+  @include Montserrat(18px,10px)
+  color: rgba(31, 32, 65, 0.5)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    right: -10px
+    top: -10px
+
+.disabled
+  color: rgba(31, 32, 65, 0.10)
+  &:after
+    border-color: rgba(31, 32, 65, 0.10)
