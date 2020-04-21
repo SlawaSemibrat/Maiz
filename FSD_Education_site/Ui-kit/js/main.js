@@ -13,9 +13,9 @@ function updateDropdowns(){
     //Если сложная шапка для dropdown в названии выводим значения из нескольких итемов
     if(dropdown.hasAttribute('several-word-forms')) {
       var result = []
-      let results
+      let results= ''
       let sum = 0
-      let i = 0
+      let i = 1
       let defaultValue = dropdown.getAttribute('default')
       dropdown.querySelectorAll('.dropdown-list__item').forEach(item =>{
       // Получаем все Элементы dropdown cо словоформами
@@ -31,17 +31,22 @@ function updateDropdowns(){
          if(value > 0){
            let wordForms = item.getAttribute('wordForms').split(' ')
            let rightForm = num2str(value, wordForms)
-           result[i] = value + ' ' + rightForm
+           result[i]='' + value + ' ' + rightForm
+
+           if(result[i]!=="undefined"){
+             result[i]+=', '
+             results+=result[i]
+           }
+
+           results = results.replace('$',' ')
+           results = results.replace(",$",'')
            i++
          }}
-         /*for (var i = 0; i < result.length; i++) {
-           if (result[i]!=0) {
-             results = result[1]+ ', '+result[2] + ', '+ result[3]
-           }
-         }*/
+
         //Пишем в заголовок дропдауна результат
         if(sum !== 0){
-          dropdown.querySelector('.dropdown__name').value = innerText = result[0]+ ', '+result[1] + ', '+ result[2]
+          dropdown.querySelector('.dropdown__name').value = results
+
         }
         else{
           dropdown.querySelector('.dropdown__name').value = defaultValue
@@ -110,6 +115,8 @@ function createControls(defaultValue){
   element.append(plus)
   return(element)
 }
+
+
 document.addEventListener('DOMContentLoaded', function(){
   //Получаем все дропдауны
   let drop = document.querySelectorAll('.dropdown')
@@ -128,3 +135,34 @@ document.addEventListener('DOMContentLoaded', function(){
     updateDropdowns()
   })
 })
+
+
+
+/*****like button******************/
+
+
+    var clicks = 0
+    var liked = 1
+    function onClick() {
+      if(liked%2==1)
+          clicks += 1
+
+      else
+          clicks -= 1
+
+          liked++
+        document.getElementById("clicks").innerHTML = clicks
+    }
+
+    var clicks1 = 0
+    var liked1 = 1
+    function onClick1() {
+      if(liked1%2==1)
+          clicks1 += 1
+
+      else
+          clicks1 -= 1
+
+          liked1++
+        document.getElementById("clicks1").innerHTML = clicks1
+    }

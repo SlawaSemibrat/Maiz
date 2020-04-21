@@ -25,6 +25,11 @@ h3
   border: 1px solid rgba(31, 32, 65, 0.5)
   border-radius: $border-radius
 
+@mixin button-stile
+  border-radius: 22px
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  padding: 15px 20px
+
 %input-style
   @include Montserrat(14px, 24px)
   background: #FFFFFF
@@ -54,10 +59,13 @@ h3
   height: 1800px
 
 .container
-  flex: .3
+
   height: 99%
   display: flex
   flex-direction: column
+  justify-content: space-between
+
+  max-height: 635px
 
 .heading-contantainer
   margin-bottom: 5px
@@ -132,6 +140,8 @@ h3
   @include icon-dropdown
   background-image: url(../img/arrow_forward.svg)
   width: 266px
+  &:focus, &:hover
+    @include element-focus-style
 
 /***Checkbox Buttons******
 
@@ -267,6 +277,118 @@ h3
 .radio__container input:checked ~  .radio__container__text
   color: rgba(31, 32, 65, 0.75)
 
+/****like buttons**************
+
+.like-button
+  @include Montserrat(10px, 12px)
+  background: #FFFFFF
+  border-radius: 10px
+  padding: 3px 10px 4px 20px
+  width: 40px
+  height: 20px
+
+
+.like-button-nonPress
+  border: 1px solid rgba(31, 32, 65, 0.25)
+  color: rgba(31, 32, 65, 0.25)
+  background-image: url(../img/like-nonPress.svg)
+  background-position: left 5px center
+  background-repeat: no-repeat
+  &:active, &:focus
+    outline: none
+
+
+.like-button-press
+  border: 1px solid #BC9CFF
+  color: #BC9CFF
+  background-image: url(../img/like-press.svg)
+  background-position: left 5px center
+  background-repeat: no-repeat
+  &:active, &:focus
+    outline: none
+
+/****rate-button*********************
+
+.rates-container
+ display: flex
+
+
+.rate-container
+  display: flex
+  flex-wrap: nowrap
+  &:not(:last-child)
+    margin-right: 20px
+
+.rate-star
+  &:not(:last-child)
+    padding-right: 4px
+
+/****button*****
+
+.button1
+  @include button-stile
+  @include Montserrat(12px, 15px)
+  text-transform: uppercase
+  font-weight: bold
+  color: #FFFFFF
+
+
+.button1, .button2 , .button3 , .button4
+  margin-right: 20px
+  margin-bottom: 30px
+  &:active, &:focus
+    outline: none
+
+.button2
+  @include button-stile
+  @include Montserrat(12px, 15px)
+  opacity: .5
+  text-transform: uppercase
+  font-weight: bold
+  color: #FFFFFF
+
+
+.button3
+  @include button-stile
+  @include Montserrat(12px, 15px)
+  position: relative
+  text-transform: uppercase
+  font-weight: bold
+  color: #BC9CFF
+  z-index: 0
+  &:after
+    content: ""
+    position: absolute
+    width: 96%
+    height: 90%
+    top: 2px
+    left: 2px
+    border-radius: 22px
+    background: #ffffff
+    z-index: -1
+
+
+.button4
+  @include button-stile
+  @include Montserrat(12px, 15px)
+  position: relative
+  opacity: .5
+  text-transform: uppercase
+  font-weight: bold
+  color: #BC9CFF
+  z-index: 0
+  &:after
+    content: ""
+    position: absolute
+    width: 96%
+    height: 90%
+    top: 2px
+    left: 2px
+    border-radius: 22px
+    background: #ffffff
+    z-index: -1
+
+
 
 /*****dropdown expend**********
 .dropdown
@@ -290,6 +412,7 @@ h3
   color: rgba(31, 32, 65, 0.75)
   border: 1px solid rgba(31, 32, 65, 0.5)
   cursor: pointer
+
 
 .dropdown-list
   @extend %input-style

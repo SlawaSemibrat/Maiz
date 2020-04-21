@@ -58,10 +58,11 @@ h3 {
 }
 
 .container {
-  flex: 0.3;
   height: 99%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  max-height: 635px;
 }
 
 .heading-contantainer {
@@ -170,6 +171,10 @@ h3 {
   background-repeat: no-repeat;
   background-image: url(../img/arrow_forward.svg);
   width: 266px;
+}
+.subscription-text-field__input:focus, .subscription-text-field__input:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
 }
 
 /***Checkbox Buttons****** */
@@ -327,6 +332,152 @@ h3 {
 
 .radio__container input:checked ~ .radio__container__text {
   color: rgba(31, 32, 65, 0.75);
+}
+
+/****like buttons************** */
+.like-button {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 3px 10px 4px 20px;
+  width: 40px;
+  height: 20px;
+}
+
+.like-button-nonPress {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.25);
+  background-image: url(../img/like-nonPress.svg);
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+}
+.like-button-nonPress:active, .like-button-nonPress:focus {
+  outline: none;
+}
+
+.like-button-press {
+  border: 1px solid #BC9CFF;
+  color: #BC9CFF;
+  background-image: url(../img/like-press.svg);
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+}
+.like-button-press:active, .like-button-press:focus {
+  outline: none;
+}
+
+/****rate-button********************* */
+.rates-container {
+  display: flex;
+}
+
+.rate-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.rate-container:not(:last-child) {
+  margin-right: 20px;
+}
+
+.rate-star:not(:last-child) {
+  padding-right: 4px;
+}
+
+/****button***** */
+.button1 {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding: 15px 20px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.button1, .button2, .button3, .button4 {
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.button1:active, .button1:focus, .button2:active, .button2:focus, .button3:active, .button3:focus, .button4:active, .button4:focus {
+  outline: none;
+}
+
+.button2 {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding: 15px 20px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.button3 {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding: 15px 20px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #BC9CFF;
+  z-index: 0;
+}
+.button3:after {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 90%;
+  top: 2px;
+  left: 2px;
+  border-radius: 22px;
+  background: #ffffff;
+  z-index: -1;
+}
+
+.button4 {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding: 15px 20px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #BC9CFF;
+  z-index: 0;
+}
+.button4:after {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 90%;
+  top: 2px;
+  left: 2px;
+  border-radius: 22px;
+  background: #ffffff;
+  z-index: -1;
 }
 
 /*****dropdown expend********** */

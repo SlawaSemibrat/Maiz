@@ -17,7 +17,7 @@
   <div class="main-container">
 
 
-<div class="container-for-items">
+<div class="container">
   <div class="container-for-items__items text-field-default">
     <span class="heading-contantainer">
       <h3>text field</h3>
@@ -126,9 +126,60 @@
     </form>
   </div>
 
+
+  <div class="container-for-items__items text-field-default">
+    <span class="heading-contantainer">
+      <h3>like button</h3>
+    </span>
+    <button onClick="onClick()" class="like-button like-button-nonPress">
+      <span id="clicks">0</span>
+    </button>
+    <button onClick="onClick1()" class="like-button like-button-press">
+      <span id="clicks1">0</span>
+    </button>
   </div>
 
+  <div class="container-for-items__items rate-main-container">
+    <span class="heading-contantainer">
+      <h3>rate button</h3>
+    </span>
+    <div class="rates-container">
+      <div class="rate-container">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star_border.svg" alt="" class="rate-star">
+      </div>
+      <div class="rate-container">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+        <img src="img/star.svg" alt="" class="rate-star">
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
   <div class="container">
+
+    <div class="container-for-items__items filter-date-dropdown">
+      <span class="heading-contantainer">
+        <h3>filter date dropdown</h3>
+      </span>
+      <div class="container-for-buttoms">
+        <button class="button1">CLICK ME</button>
+        <button class="button2">CLICK ME</button>
+      </div>
+      <div class="container-for-buttoms">
+        <button class="button3">CLICK ME</button>
+        <button class="button4">CLICK ME</button>
+      </div>
+    </div>
+
     <div class="dropdown absolute" several-word-forms default="спальни, кровати">
       <input class="dropdown__name" type="text" placeholder="...">
       <div class="dropdown-list">
@@ -137,7 +188,10 @@
         <div class="dropdown-list__item" wordforms="Ванная$комната Ванные$комнаты Ванных$комнат" name="bath">Ванные комнаты</div>
       </div>
     </div>
+
   </div>
+
+
 
 </div>
 
